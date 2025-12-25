@@ -1,0 +1,27 @@
+{
+    "id": "19AC8436",
+    "path": "~/ptuts/fonctions2A/R/test_khi_deux.R",
+    "project_path": "R/test_khi_deux.R",
+    "type": "r_source",
+    "hash": "1326009567",
+    "contents": "",
+    "dirty": false,
+    "created": 1766524005813.0,
+    "source_on_save": false,
+    "relative_order": 19,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1766524044,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1766524044132,
+    "read_only": false,
+    "read_only_alternatives": []
+}

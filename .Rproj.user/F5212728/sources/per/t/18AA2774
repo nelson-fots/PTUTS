@@ -1,0 +1,27 @@
+{
+    "id": "18AA2774",
+    "path": "~/ptuts/fonctions2A/R/modele_additif.R",
+    "project_path": "R/modele_additif.R",
+    "type": "r_source",
+    "hash": "2058472278",
+    "contents": "",
+    "dirty": false,
+    "created": 1766450979466.0,
+    "source_on_save": false,
+    "relative_order": 8,
+    "properties": {
+        "tempName": "Untitled2",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1766451049,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1766451049062,
+    "read_only": false,
+    "read_only_alternatives": []
+}
