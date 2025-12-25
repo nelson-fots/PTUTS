@@ -13,4 +13,4 @@ devtools::install_github("nelson-fots/PTUTS/fonctions2A")
 ```
 ## Documentation
 La documentation détaillée, des exemples d'utilisation et des explications pédagogiques sont disponibles dans le wiki du projet :
-https://github.com/nelson-fots/PTUTS/fonctions2A/wiki
+https://github.com/nelson-fots/PTUTS/wiki
