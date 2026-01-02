@@ -1,0 +1,157 @@
+---
+title: "exemple_de_donnee"
+output: html_document
+date: "2025-12-30"
+---
+## A la suite, on dispose un jeu de données pour lequel on peut effecter certains de nos fonctions du packages
+
+```{r}
+set.seed(123)
+
+#on prend 72 mois soit 6 ans
+n <- 72
+t <- 1:n
+```
+
+```{r}
+# Les composantes(tendance, saisonnalité et résidus ou bruit)
+tendance <- 1000 + 5 * t
+saison <- 120 * sin(2 * pi * t / 12)
+bruit <- rnorm(n, mean = 0, sd = 60)
+```
+
+```{r}
+# Série finale
+visiteurs <- tendance + saison + bruit
+```
+
+```{r}
+# Série temporelle mensuelle de 2019 à 2025(pas d'un an ou 12 mois)
+ts_visiteurs <- ts(
+  visiteurs,
+  frequency = 12,
+  start = c(2019, 1)
+)
+```
+
+```{r}
+# Visualisation
+plot(ts_visiteurs,
+     main = "Nombre mensuel de visiteurs d’un site web",
+     ylab = "Nombre de visiteurs",
+     xlab = "Temps")
+
+```
+
+
+## Utilisation de non fonctions
+```{r}
+#Chargemnt du package
+library(fonctions2A)
+```
+
+
+```{r}
+# Moyenne mobile
+mm <- moyenne_mobile(ts_visiteurs, k = 3)
+
+# On reprend le graphe pour tracer la courbe de la moyenne mobile
+plot(ts_visiteurs,
+     main = "Nombre mensuel de visiteurs d’un site web et série lissée avec mm",
+     ylab = "Nombre de visiteurs",
+     xlab = "Temps")
+lines(mm, col = 'red', lwd = 2)
+
+```
+
+La moyenne mobile permet de lisser les variations mensuelles du nombre de visiteurs.
+Sur notre série, elle réduit l’effet du bruit aléatoire et met en évidence une tendance globale croissante.
+Les fluctuations saisonnières sont atténuées, ce qui facilite la lecture de l’évolution générale du trafic.
+
+
+```{r}
+# Lissage exponentielle simple
+les <- lissage_exp_simple(ts_visiteurs, alpha = 0.3)
+# On reprend le graphe pour tracer la courbe du les
+plot(ts_visiteurs,
+     main = "Nombre mensuel de visiteurs d’un site web et la série lissée aves les",
+     ylab = "Nombre de visiteurs",
+     xlab = "Temps")
+lines(les$fitted,col = 'blue', lwd = 2)
+
+```
+
+Le lissage exponentiel simple produit une série plus régulière en donnant plus de poids aux observations récentes.
+Dans notre cas, la série lissée suit bien l’évolution générale du nombre de visiteurs, mais ne capture pas totalement la tendance à long terme, car cette méthode ne modélise pas explicitement la tendance.
+
+
+```{r}
+# Lissage exponentielle doble
+led <- lissage_exp_double(ts_visiteurs, alpha = 0.4, beta = 0.2)
+
+
+# On reprend le graphe pour tracer la courbe du led
+plot(ts_visiteurs,
+     main = "Nombre mensuel de visiteurs d’un site web et la série lissée aves led",
+     ylab = "Nombre de visiteurs",
+     xlab = "Temps")
+lines(led$fitted, col = 'purple', lwd = 2)
+```
+
+Le lissage exponentiel double prend en compte à la fois le niveau et la tendance de la série.
+Il s’adapte mieux que le lissage simple à la croissance progressive du nombre de visiteurs.
+La série ajustée suit correctement l’évolution globale, ce qui en fait une méthode plus pertinente lorsque la tendance est marquée.
+
+
+```{r}
+#tendance lineaire
+tend_lin <- tendance_lineaire(ts_visiteurs)
+
+# On reprend le graphe pour tracer la courbe du led
+plot(ts_visiteurs,
+     main = "Nombre mensuel de visiteurs d’un site web et la série lissée aves tendance",
+     ylab = "Nombre de visiteurs",
+     xlab = "Temps")
+lines(tend_lin$trend, col = 'darkgreen', lwd = 2)
+
+```
+
+
+La tendance linéaire met en évidence une augmentation régulière du nombre de visiteurs au fil du temps.
+La pente positive du modèle indique une croissance moyenne mensuelle du trafic.
+Cette tendance résume de manière simple l’évolution générale de la série.
+
+
+```{r}
+# Décomposition avec le modéle additif
+
+decomposition <- modele_additif(ts_visiteurs)
+plot(decomposition)
+
+
+```
+
+La décomposition additive permet de montrer que la série est bien structurée autour d’une tendance croissante et d’une saisonnalité annuelle stable. Le bruit résiduel reste limité, ce qui confirme la pertinence du modèle additif pour ce jeu de données.
+L’amplitude de la saisonnalité reste à peu près constante au cours du temps. Il est donc plus cohérent d’utiliser un modèle additif plutôt qu’un modèle multiplicatif.
+
+```{r}
+#Modéle auto-regréssif
+modele_auto_regressif(ts_visiteurs)$order
+
+```
+
+Le modèle auto-régressif sélectionné est d’ordre 1. Cela indique que le nombre de visiteurs d’un mois dépend principalement de la valeur observée le mois précédent. Ce résultat est cohérent avec une série mensuelle présentant une évolution progressive.
+
+
+```{r}
+# Seillage par quantile
+res <- seuillage_quantile(as.numeric(ts_visiteurs))
+
+
+```
+
+Le seuillage par quantiles ne détecte pas de valeurs extrêmes significatives(la sortie donne NULL). Cela indique que la série ne présente pas d’anomalies marquées et que les fluctuations observées restent dans un intervalle normal.
+
+
+
+
