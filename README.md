@@ -9,7 +9,7 @@ L' objectif est d'accompagner les étudiants dans l'apprentissage des statistiqu
  Le package peut etre installé directement depuis Github : 
  ```{r}
 # install.packages("devtools")
-devtools::install_github("nelson-fots/PTUTS/fonctions2A")
+devtools::install_github("nelson-fots/PTUTS")
 ```
 ## Documentation
 La documentation détaillée, des exemples d'utilisation et des explications pédagogiques sont disponibles dans le wiki du projet :
