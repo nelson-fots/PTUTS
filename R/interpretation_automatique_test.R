@@ -1,18 +1,19 @@
-#' Interprétation automatique d’un test
+#' Interpretation automatique d'un test
 #'
-#' Fournit une conclusion simple à partir de la p-value.
+#' Fournit une conclusion simple a partir de la p-value.
 #'
-#' @param p_value p-value du test
-#' @param alpha niveau de risque (par défaut 5%)
+#' @param p_value p-value du test (numerique)
+#' @param alpha niveau de risque, par defaut 0.05
 #'
-#' @return caractère
+#' @return Une chaine de caracteres indiquant le resultat du test.
+#' @export
 #'
 #' @examples
 #' interpretation_test(0.03)
 interpretation_test <- function(p_value, alpha = 0.05) {
-   if (p_value < alpha) {
-     "Rejet de l'hypothèse nulle (H0)"
-     } else {
-       "On ne rejette pas l'hypothèse nulle (H0)"
-       }
+  if (p_value < alpha) {
+    return("Rejet de l'hypothese nulle (H0)")
+  } else {
+    return("On ne rejette pas l'hypothese nulle (H0)")
   }
+}

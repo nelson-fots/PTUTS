@@ -10,6 +10,8 @@
 #'
 #' @return vecteur numérique ou objet ts de même longueur
 #'
+#'@export
+#'
 #' @examples
 #' x <- 1:12
 #' moyenne_mobile(x, k = 3)

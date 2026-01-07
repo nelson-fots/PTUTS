@@ -146,8 +146,7 @@ Le modèle auto-régressif sélectionné est d’ordre 1. Cela indique que le no
 ```{r}
 # Seillage par quantile
 res <- seuillage_quantile(as.numeric(ts_visiteurs))
-
-
+res$is_outlier
 ```
 
 Le seuillage par quantiles ne détecte pas de valeurs extrêmes significatives(la sortie donne NULL). Cela indique que la série ne présente pas d’anomalies marquées et que les fluctuations observées restent dans un intervalle normal.

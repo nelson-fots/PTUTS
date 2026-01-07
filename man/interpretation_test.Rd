@@ -2,20 +2,20 @@
 % Please edit documentation in R/interpretation_automatique_test.R
 \name{interpretation_test}
 \alias{interpretation_test}
-\title{Interprétation automatique d’un test}
+\title{Interpretation automatique d'un test}
 \usage{
 interpretation_test(p_value, alpha = 0.05)
 }
 \arguments{
-\item{p_value}{p-value du test}
+\item{p_value}{p-value du test (numerique)}
 
-\item{alpha}{niveau de risque (par défaut 5%)}
+\item{alpha}{niveau de risque, par defaut 0.05}
 }
 \value{
-caractère
+Une chaine de caracteres indiquant le resultat du test.
 }
 \description{
-Fournit une conclusion simple à partir de la p-value.
+Fournit une conclusion simple a partir de la p-value.
 }
 \examples{
 interpretation_test(0.03)

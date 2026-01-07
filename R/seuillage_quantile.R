@@ -8,6 +8,7 @@
 #' @param q_high quantile haut
 #'
 #' @return liste avec bornes et indicateur d’extrêmes
+#'@export
 #'
 #' @examples
 #' x <- c(rnorm(100), 10)

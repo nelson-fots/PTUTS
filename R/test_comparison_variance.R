@@ -6,6 +6,8 @@
 #'
 #' @return objet htest (var.test)
 #'
+#'@export
+#'
 #' @examples
 #' x <- rnorm(20, sd = 2)
 #' y <- rnorm(25, sd = 3)

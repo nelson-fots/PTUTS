@@ -6,6 +6,8 @@
 #'
 #' @return liste avec pente et tendance estimée
 #'
+#'@export
+#'
 #' @examples
 #' x <- ts(1:20 + rnorm(20))
 #' tendance_lineaire(x)

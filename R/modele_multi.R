@@ -6,6 +6,8 @@
 #'
 #' @return objet decompose
 #'
+#'@export
+#'
 #' @examples
 #' x <- ts(abs(rnorm(120)) + 10, frequency = 12)
 #' modele_multiplicatif(x)

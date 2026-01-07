@@ -6,6 +6,8 @@
   #'
   #' @return objet decompose
   #'
+  #'@export
+  #'
   #' @examples
   #' x <- ts(rnorm(120) + sin(2*pi*(1:120)/12), frequency = 12)
   #' modele_additif(x)

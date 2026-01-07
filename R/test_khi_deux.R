@@ -7,6 +7,8 @@
 #'
 #' @return objet htest (chisq.test)
 #'
+#'@export
+#'
 #' @examples
 #' tab <- matrix(c(20, 10, 15, 25), nrow = 2)
 #' test_khi_deux(tab)

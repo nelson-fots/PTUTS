@@ -6,6 +6,8 @@
 #'
 #' @return objet htest (shapiro.test)
 #'
+#'@export
+#'
 #' @examples
 #' x <- rnorm(30)
 #' test_normalite(x)

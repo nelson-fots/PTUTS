@@ -1,12 +1,14 @@
-#' Visualisation simple d’une série temporelle
+#' Visualisation simple d’une serie temporelle
 #'
-#' Trace la série avec un titre automatique.
+#' Trace la serie avec un titre automatique.
 #'
 #' @param x objet ts
+#'
+#'@export
 #'
 #' @examples
 #' x <- ts(rnorm(30), frequency = 12)
 #' visualisation_serie(x)
 visualisation_serie <- function(x) {
-   plot(x, main = "Série temporelle", ylab = "Valeurs")
+   plot(x, main = "Serie temporelle", ylab = "Valeurs")
   }

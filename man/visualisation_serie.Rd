@@ -2,7 +2,7 @@
 % Please edit documentation in R/visualisation_d_une_serie.R
 \name{visualisation_serie}
 \alias{visualisation_serie}
-\title{Visualisation simple d’une série temporelle}
+\title{Visualisation simple d’une serie temporelle}
 \usage{
 visualisation_serie(x)
 }
@@ -10,7 +10,7 @@ visualisation_serie(x)
 \item{x}{objet ts}
 }
 \description{
-Trace la série avec un titre automatique.
+Trace la serie avec un titre automatique.
 }
 \examples{
 x <- ts(rnorm(30), frequency = 12)

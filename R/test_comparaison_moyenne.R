@@ -8,6 +8,8 @@
 #'
 #' @return objet htest (t.test)
 #'
+#'@export
+#'
 #' @examples
 #' x <- rnorm(20, mean = 5)
 #' y <- rnorm(25, mean = 6)

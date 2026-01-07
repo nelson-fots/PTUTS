@@ -8,6 +8,8 @@
 #'
 #' @return objet htest (binom.test)
 #'
+#'@export
+#'
 #' @examples
 #' test_probabilite(35, 50, p0 = 0.5)
 test_probabilite <- function(x, n, p0 = 0.5) {

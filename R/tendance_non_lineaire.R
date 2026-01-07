@@ -6,6 +6,9 @@
 #'
 #' @return liste avec paramètres et tendance estimée
 #'
+#'@export
+#'@importFrom stats nls predict ts start frequency coef
+#'
 #' @examples
 #' t <- 1:30
 #' x <- 2 * exp(0.05 * t) + rnorm(30)

@@ -8,6 +8,8 @@
 #'
 #' @return liste contenant la série lissée
 #'
+#'@export
+#'
 #' @examples
 #' x <- c(10, 12, 13, 12, 14)
 #' lissage_exp_simple(x, alpha = 0.3)

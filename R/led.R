@@ -8,6 +8,8 @@
 #'
 #' @return liste avec niveau, tendance et série ajustée
 #'
+#'@export
+#'
 #' @examples
 #' x <- c(5, 6, 8, 9, 11)
 #' lissage_exp_double(x, alpha = 0.4, beta = 0.2)

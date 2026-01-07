@@ -8,6 +8,8 @@
   #'
   #' @return liste avec statistique F et p-value
   #'
+  #'@export
+  #'
   #' @examples
   #' n <- 60
   #' x <- 1:n

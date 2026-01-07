@@ -7,6 +7,8 @@
 #'
 #' @return liste avec statistique et p-value
 #'
+#'@export
+#'
 #' @examples
 #' x <- rnorm(25, sd = 2)
 #' test_variance_simple(x, sigma0 = 2)

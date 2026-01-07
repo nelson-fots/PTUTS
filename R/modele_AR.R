@@ -7,6 +7,8 @@
 #'
 #' @return liste avec coefficients et série ajustée
 #'
+#'@export
+#'
 #' @examples
 #' x <- arima.sim(list(ar = 0.6), n = 100)
 #' modele_auto_regressif(x, p = 1)
