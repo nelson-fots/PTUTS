@@ -7,6 +7,8 @@ L' objectif est d'accompagner les étudiants dans l'apprentissage des statistiqu
 
 ## Installation
 L'installation de notre package nécéssiste l'installation du package "roxygen2".
+
+
  Le package peut etre installé directement depuis Github : 
  ```{r}
 # install.packages("devtools")
