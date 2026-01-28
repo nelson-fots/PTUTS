@@ -15,6 +15,16 @@ liste avec pente et tendance estimée
 \description{
 Ajuste une droite de régression sur une série temporelle.
 }
+\details{
+La tendance représente l'évolution globale et de long terme d'une série
+chronologique. Elle peut être croissante, décroissante ou stable.
+
+Selon les données, la tendance peut être modélisée par une relation linéaire
+ou par une relation non linéaire plus flexible.
+
+Identifier la tendance permet de mieux comprendre la dynamique générale
+de la série et constitue une étape importante dans la modélisation.
+}
 \examples{
 x <- ts(1:20 + rnorm(20))
 tendance_lineaire(x)

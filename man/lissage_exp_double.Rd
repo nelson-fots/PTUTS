@@ -19,6 +19,17 @@ liste avec niveau, tendance et série ajustée
 \description{
 Modélise le niveau et la tendance d’une série sans saisonnalité.
 }
+\details{
+Le lissage exponentiel double est une extension du lissage exponentiel simple
+permettant de prendre en compte la présence d'une tendance dans la série
+chronologique.
+
+Cette méthode modélise à la fois le niveau et la tendance de la série, ce qui
+la rend plus adaptée aux séries présentant une évolution globale dans le temps.
+
+Elle est souvent utilisée comme première approche avant des modèles plus
+complexes lorsque la tendance est approximativement linéaire.
+}
 \examples{
 x <- c(5, 6, 8, 9, 11)
 lissage_exp_double(x, alpha = 0.4, beta = 0.2)

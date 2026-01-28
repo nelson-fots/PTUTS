@@ -1,6 +1,18 @@
 
 #' Moyenne mobile simple
 #'
+#' @details
+#' La moyenne mobile est une méthode de lissage simple utilisée en analyse de séries
+#' chronologiques. Elle permet de réduire les fluctuations aléatoires d'une série
+#' en remplaçant chaque valeur par la moyenne des observations voisines.
+#'
+#' Cette méthode est particulièrement utile pour faire apparaître la tendance
+#' générale d'une série lorsque celle-ci est perturbée par du bruit.
+#'
+#' Le choix de la taille de la fenêtre est important : une fenêtre trop petite
+#' conserve beaucoup de fluctuations, tandis qu'une fenêtre trop grande peut
+#' masquer certaines variations importantes.
+
 #' Calcule une moyenne mobile afin de lisser les fluctuations de court terme
 #' d’une série temporelle.
 #'

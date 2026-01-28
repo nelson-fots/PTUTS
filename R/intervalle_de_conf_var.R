@@ -3,6 +3,16 @@
 #' Calcule un intervalle de confiance pour la variance d'un echantillon
 #' en supposant une distribution normale.
 #'
+#' @details
+#' L'intervalle de confiance pour la variance permet d'estimer l'étendue possible
+#' de la dispersion réelle d'une population.
+#'
+#' Il est particulièrement utile pour évaluer la stabilité ou l'homogénéité
+#' des données observées.
+#'
+#' L'interprétation de cet intervalle repose sur la comparaison avec des valeurs
+#' de référence ou entre plusieurs groupes.
+#'
 #' @param x Numeric vector.
 #' @param conf.level Niveau de confiance (par defaut 0.95).
 #'

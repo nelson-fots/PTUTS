@@ -2,6 +2,16 @@
 #'
 #' Test d’indépendance ou d’adéquation.
 #'
+#' @details
+#' Le test du khi-deux est utilisé pour analyser la relation entre deux variables
+#' qualitatives à partir d'un tableau de contingence.
+#'
+#' Il permet de tester l'indépendance entre les variables ou l'adéquation
+#' entre des fréquences observées et des fréquences théoriques.
+#'
+#' Ce test est largement utilisé dans les études descriptives et exploratoires
+#' impliquant des données catégorielles.
+#'
 #' @param x table de contingence ou vecteur de comptes
 #' @param p probabilités théoriques (optionnel)
 #'
