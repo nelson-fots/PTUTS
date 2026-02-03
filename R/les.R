@@ -3,6 +3,17 @@
 #'
 #' Lisse une série à l’aide d’un paramètre alpha.
 #'
+#' @details
+#' Le lissage exponentiel simple est une méthode de prévision adaptée aux séries
+#' chronologiques ne présentant ni tendance marquée ni saisonnalité.
+#'
+#' Il repose sur une moyenne pondérée des observations passées, où les valeurs
+#' les plus récentes ont un poids plus important que les plus anciennes.
+#'
+#' Le paramètre de lissage contrôle l'importance accordée aux observations récentes.
+#' Une valeur élevée rend le modèle plus réactif aux changements, tandis qu'une
+#' valeur faible produit un lissage plus stable.
+
 #' @param x vecteur numérique ou ts
 #' @param alpha paramètre de lissage (0 < alpha <= 1)
 #'

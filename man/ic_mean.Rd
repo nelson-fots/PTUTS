@@ -23,6 +23,15 @@ Liste contenant :
 Calcule un intervalle de confiance pour la moyenne d'un echantillon
 en utilisant la loi de Student.
 }
+\details{
+L'intervalle de confiance pour la moyenne permet d'encadrer la valeur inconnue
+de la moyenne d'une population à partir d'un échantillon.
+
+Il fournit une estimation de l'incertitude associée à la moyenne observée.
+
+Un intervalle de confiance étroit indique une estimation précise, tandis
+qu'un intervalle large traduit une plus grande variabilité des données.
+}
 \examples{
 x <- stats::rnorm(30, mean = 10, sd = 2)
 ic_mean(x)
