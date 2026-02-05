@@ -20,18 +20,44 @@ vecteur numérique ou objet ts de même longueur
 Moyenne mobile simple
 }
 \details{
-La moyenne mobile est une méthode de lissage simple utilisée en analyse de séries
-chronologiques. Elle permet de réduire les fluctuations aléatoires d'une série
-en remplaçant chaque valeur par la moyenne des observations voisines.
+La moyenne mobile est une méthode de lissage des séries chronologiques
+consistant à remplacer chaque observation par la moyenne des valeurs
+situées dans une fenêtre temporelle de taille fixée.
 
-Cette méthode est particulièrement utile pour faire apparaître la tendance
-générale d'une série lorsque celle-ci est perturbée par du bruit.
+\strong{Cas impair}
 
-Le choix de la taille de la fenêtre est important : une fenêtre trop petite
-conserve beaucoup de fluctuations, tandis qu'une fenêtre trop grande peut
-masquer certaines variations importantes.
-Calcule une moyenne mobile afin de lisser les fluctuations de court terme
-d’une série temporelle.
+Lorsque l’ordre de la moyenne mobile est impair, on considère une fenêtre
+de taille p = 2k + 1, avec k  un entier naturel non nul.
+La moyenne mobile centrée d’ordre 2k+1 au temps t est définie par :
+\deqn{
+M_{2k+1}(t) = \frac{1}{2k+1}\sum_{j=-k}^{k} x_{t+j}
+}
+pour t = k+1, \ldots, n-k.
+
+Dans ce cas, la fenêtre est symétrique autour de l’instant t ,
+ce qui permet un centrage direct de la moyenne mobile et un bon
+alignement temporel avec la série initiale.
+
+\strong{Cas pair}
+
+Lorsque l’ordre est pair, on considère une fenêtre de taille p = 2k.
+La moyenne mobile ne peut pas être centrée directement car la fenêtre
+est située entre deux observations successives.
+Le calcul s’effectue alors en deux étapes.
+
+\emph{Étape 1 : calcul d’une moyenne mobile non centrée}
+\deqn{
+M_{2k}(t) = \frac{1}{2k}\sum_{j=0}^{2k-1} x_{t+j}
+}
+pour t = 1, \ldots, n-2k+1.
+
+\emph{Étape 2 : centrage de la moyenne mobile}
+\deqn{
+\widetilde{M}_{2k}(t) = \frac{1}{2}\left(M_{2k}(t) + M_{2k}(t+1)\right)
+}
+
+Cette seconde étape permet de recentrer la série lissée dans le temps
+afin de garantir un alignement correct avec la série d’origine.
 }
 \examples{
 x <- 1:12
